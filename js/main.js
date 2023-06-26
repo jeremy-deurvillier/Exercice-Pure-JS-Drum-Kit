@@ -4,6 +4,7 @@
 * */
 function playSound(key) {
     document.querySelector('audio[data-key="' + key + '"]').play();
+    document.querySelector('.key[data-key="' + event.keyCode + '"]').classList.add('playing');
 }
 
 /* ** Sélectionne visuellement la touche préssée dans l'élément .pad.
@@ -11,8 +12,8 @@ function playSound(key) {
 * @param Event event Un événement clavier.
 * */
 function selectKey(event) {
-    console.log(event.keyCode);
-    document.querySelector('.key[data-key="' + event.keyCode + '"]').style.background = 'black';
+    //console.log(event.keyCode);
+    //document.querySelector('.key[data-key="' + event.keyCode + '"]').style.background = 'black';
 
     playSound(event.keyCode);
 }
